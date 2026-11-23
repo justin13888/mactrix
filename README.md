@@ -48,6 +48,20 @@ xed Mactrix.xcworkspace
 
 Then open the project in Xcode and build using `Cmd+B`.
 
+### Command Line
+
+Common tasks are also available as [just](https://github.com/casey/just) recipes (`brew install just`):
+
+```bash
+just build      # Debug build
+just run        # Build and launch the app
+just test       # Run all tests
+just fmt        # Format Swift sources with swift-format
+just ci         # Build, analyze and test, like CI
+```
+
+Run `just` to list every recipe. Output is piped through [xcbeautify](https://github.com/cpisciotta/xcbeautify) when it is installed.
+
 ### Translations
 
 Mactrix is available in English and German. All translations live in a single string catalog in the app target, `Mactrix/Localizable.xcstrings`, because the UI code in the Swift package looks up strings in the app's main bundle. Xcode doesn't add strings from the package to this catalog by itself, so after adding or changing user-facing strings, run:
